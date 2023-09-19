@@ -17,6 +17,7 @@
   "author": "Cristian Fernandez Moreno",
   "license": "ISC",
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
     "compression-webpack-plugin": "^10.0.0",
     "css-minimizer-webpack-plugin": "^5.0.1",
     "file-loader": "^6.2.0",

@@ -3,7 +3,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
-
+const CompressionWebpackPlugin = require('compression-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 
 module.exports = (env, argv) => {
@@ -56,13 +57,20 @@ module.exports = (env, argv) => {
         ],
       },
       plugins: [
+        new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
           filename: '[name].[contenthash].css',
         }),
         new HtmlWebpackPlugin({
           template: './src/index.html', 
         }),
-        
+        new CompressionWebpackPlugin({
+          filename: '[path][base].gz',
+          algorithm: 'gzip',
+          test: /\.(js|css|html|svg)$/,
+          threshold: 5120,
+          minRatio: 0.8,
+        }),
       ],
       optimization: {
         minimize: true,
@@ -81,7 +89,7 @@ module.exports = (env, argv) => {
               options: {
                 encodeOptions: {
                   png: {
-                    quality: 80,
+                    quality: 50,
                   },
                 },
               },
