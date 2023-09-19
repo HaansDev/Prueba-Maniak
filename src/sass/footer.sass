@@ -1,0 +1,48 @@
+@import ./variables.sass
+@import ./mixins.sass
+
+
+.container-footer
+    max-width: 1440px
+    width: 100%
+    height: 100%
+    display: flex
+    margin: 0 auto
+    position: relative
+    overflow: hidden
+
+    .menu-footer
+        display: inline-flex
+        align-items: flex-start
+        z-index: 1
+
+        .menu-list-footer
+            display: flex
+            padding: 16px
+            flex-direction: column
+            align-items: start
+            gap: 16px
+
+            .titulo-menu
+                @include tituloFooter
+                font-family: 'Robo Condensend', sans-serif
+                color: $colorNegroAzulado
+                font-size: 32px
+
+            .menu-list
+                list-style: none
+
+                .list-menu
+                    @include texto400
+                    font-family: 'Roboto', sans-serif
+                    font-size: 14px
+                    padding: 10px 0
+
+                    a
+                        text-decoration: none
+                        color: $colorNegroAzulado
+
+    .logo-footer
+        position: absolute
+        right: 0
+        z-index: 0

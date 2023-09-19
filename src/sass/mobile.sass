@@ -1,0 +1,76 @@
+@import ./main.sass
+@import ./variables.sass
+@import ./mixins.sass
+@import ./header.sass
+@import ./footer.sass
+
+@media screen and ( max-width: 1340px )
+    .imagenes-principal
+        display: flex
+        flex-direction: column
+
+        #articulos-verticales
+            order: 2
+            gap: 45px
+
+            .articulo-vertical
+                width: 45%
+    
+        #articulos-horizontales
+            order: 1
+    
+@media screen and ( min-width: 671px )
+    .head
+        .search-bar-mobile
+            display: none
+
+@media screen and ( max-width: 670px )
+    .head
+        height: 120px !important
+
+        .container-header
+            .content-header
+                .search-bar
+                    display: none
+            
+        .search-bar-mobile
+            width: 358px
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            border: 1px solid #ccc
+            border-radius: 19px
+            padding: 8px 16px
+            border: 2px solid var(--v-2-gris-gris-claro, #C5CCD3)
+            background: var(--v-2-especiales-blanco, $colorBlanco)
+            margin: 0 auto
+
+            .search-bar
+                display: flex
+
+                .search-input
+                    width: 335px
+                    display: flex
+                    border: none
+
+                    &:focus
+                        outline: none
+        
+                .search-btn
+                    width: 24px
+                    display: flex
+                    height: 24px
+                    background: transparent
+                    border: none
+            
+@media screen and ( max-width: 460px )
+
+    .search-bar-mobile
+        width: 260px !important
+
+        .search-bar
+            .search-input
+                width: 240px !important
+
+        
+        

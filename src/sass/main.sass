@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400;500;700;900&display=swap')
+@import ./variables.sass
+@import ./mixins.sass
+@import ./header.sass
+@import ./footer.sass
+
+*
+    margin: 0
+    padding: 0
+
+body
+    background: $colorBlanco
+    width: 100vw
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    .head
+        background: $colorNav
+        height: 80px
+        width: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+    .footer
+        background: $colorGrisClaroFooter
+        height: 334px
+        width: 100%
+        z-index: 0
+
+
+.img-portada
+    img
+        width: 100vw
+        height: auto
+
+.principal
+    max-width: $anchoPagina
+    width: 100%
+    margin-bottom: $espaciado32
+
+    .titulo-h1
+        @include texto900Upper
+        font-size: 40px
+        font-family: 'Roboto', sans-serif
+        text-align: center
+        color: $colorNegroAzulado
+        margin: $espaciado32 0
+
+    .divisor
+        width: 272px
+        height: 2px
+        background: $colorGrisClaro
+        margin: 0 auto 
+        margin-bottom: $espaciado32
+        
+    .imagenes-principal
+        width: 100%
+        display: flex
+        padding: 16px 0
+        justify-content: space-between
+        gap: 16px
+        align-self: stretch
+
+        #articulos-horizontales
+            display: flex 
+            flex-direction: column 
+            gap: 31px
+        
+        #articulos-verticales
+            display: flex
+            justify-content: space-between
+            gap: 35px
+
+    

@@ -1,0 +1,53 @@
+{
+  "name": "proyecto-maniak",
+  "version": "1.0.0",
+  "description": "Prueba tenica para Maniak Fitness",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open --mode development --watch",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HaansDev/Prueba-Maniak.git"
+  },
+  "keywords": [],
+  "author": "Cristian Fernandez Moreno",
+  "license": "ISC",
+  "devDependencies": {
+    "compression-webpack-plugin": "^10.0.0",
+    "css-minimizer-webpack-plugin": "^5.0.1",
+    "file-loader": "^6.2.0",
+    "html-minimizer-webpack-plugin": "^4.4.0",
+    "image-minimizer-webpack-plugin": "^3.8.3",
+    "sharp": "^0.32.6",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "bugs": {
+    "url": "https://github.com/HaansDev/Prueba-Maniak.gitissues"
+  },
+  "homepage": "https://github.com/HaansDev/Prueba-Maniak#readme",
+  "dependencies": {
+    "@babel/core": "^7.22.20",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/preset-env": "^7.22.20",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "node-sass": "^9.0.0",
+    "postcss-loader": "^7.3.3",
+    "postcss-preset-env": "^9.1.3",
+    "sass": "^1.67.0",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "terser-webpack-plugin": "^5.3.9",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
